@@ -1,0 +1,144 @@
+//= include/_header.html
+<main class="main page" id="categories">
+  <div class="row">
+    <div class="column small-12">
+      <div class="breadcrumbs">
+        <a href="#" onclick="history.back();return false;" class="back-link icon-back"></a>
+        <a href="#" class="up-cat">Освітні програми</a>
+        <span class="separate"> / </span>
+        <a href="#" class="up-cat">Лекції</a>
+        <span class="separate"> / </span>
+        <span class="current-page">Дифузія</span>
+      </div>
+      <div class="content-page">
+        <div class="about-event">
+          <div class="img-event" style="background-image:url(img/diffusion.jpg);"></div>
+          <div class="short-info">
+            <div class="block-info">
+              <p>Коли:</p>
+              <p class="specifically">ВТ, СР, ЧТ 12:00, 16:00</p>
+            </div>
+            <div class="block-info">
+              <p>Тривалість:</p>
+              <p class="specifically">120 хв</p>
+            </div>
+            <div class="block-info">
+              <p>Ціна:</p>
+              <p class="specifically">від 250 грн.</p>
+            </div>
+          </div>
+        </div>
+        <div class="action-block">
+          <ul class="tabs">
+            <li class="tabs-title"><a class="tabs-link active" href="#panel1">Інформація</a></li>
+            <li class="tabs-title"><a  class="tabs-link" href="#panel2">Відгуки (2)</a></li>
+            <li class="tabs-title"><a  class="tabs-link" href="#panel3">Квитки</a></li>
+          </ul>
+          <div class="tabs-content">
+            <div class="tabs-panel active" id="panel1">
+              <p class="type-event">Лекція-експеримент</p>
+              <h2 class="title">Дифузія. Взаємодія атомів і молекул</h2>
+              <p class="text">Дифузія (лат. diffusio — поширення, розтікання, розсіювання, взаємодія) — процес взаємного проникнення молекул або атомів однієї речовини поміж молекул або атомів іншої, що зазвичай приводить до вирівнювання їх концентрацій у всьому займаному об'ємі.
+У деяких ситуаціях одна з речовин уже має вирівняну концентрацію, і говорять про дифузію одної речовини в іншій. При цьому зазвичай перенесення речовини відбувається з області з високою концентрацією в область з низькою концентрацією (вздовж вектора градієнта концентрації).
+Прикладом дифузії може служити перемішування газів (наприклад, поширення запахів) або рідин (якщо у воду капнути чорнила, то рідина через деякий час стане рівномірно пофарбованою). Інший приклад пов'язаний з твердим тілом: атоми дотичних металів перемішуються на кордоні дотику. Важливу роль дифузія частинок грає у фізиці плазми.</p>
+            </div>
+            <div class="tabs-panel" id="panel2">
+              <div class="reviews-block">
+                <ul class="list-reviews">
+                  <li class="item-recall">
+                    <div class="head-recall">
+                      <div class="author">Марія, м.Київ</div>
+                      <div class="rating"><span>Оцінка:</span><div class="stars"><div class="current" style="width:100%"></div></div></div>
+                    </div>
+                    <div class="text-recall">Класна лекція, прикольний і веселий професор. Все дуже детально розказали, і навіть запросили провести експеримент. Дуже рада, що купила квиток</div>
+                  </li>
+                  <li class="item-recall">
+                    <div class="head-recall">
+                      <div class="author">Тарас, м.Одеса</div>
+                      <div class="rating"><span>Оцінка:</span><div class="stars"><div class="current" style="width:70.6%"></div></div></div>
+                    </div>
+                    <div class="text-recall">Я в захваті!!!. Все дуже детально розказали, і навіть запросили провести експеримент. Приїду ще раз</div>
+                  </li>
+                  <li class="item-recall">
+                    <div class="head-recall">
+                      <div class="author">Марія, м.Київ</div>
+                      <div class="rating"><span>Оцінка:</span><div class="stars"><div class="current" style="width:100%"></div></div></div>
+                    </div>
+                    <div class="text-recall">Класна лекція, прикольний і веселий професор. Все дуже детально розказали, і навіть запросили провести експеримент. Дуже рада, що купила квиток</div>
+                  </li>
+                  <li class="item-recall">
+                    <div class="head-recall">
+                      <div class="author">Марія, м.Київ</div>
+                      <div class="rating"><span>Оцінка:</span><div class="stars"><div class="current" style="width:90%"></div></div></div>
+                    </div>
+                    <div class="text-recall">Я в захваті!!!. Все дуже детально розказали, і навіть запросили провести експеримент. Приїду ще раз</div>
+                  </li>
+                  <li class="item-recall">
+                    <div class="head-recall">
+                      <div class="author">Марія, м.Київ</div>
+                      <div class="rating"><span>Оцінка:</span><div class="stars"><div class="current" style="width:100%"></div></div></div>
+                    </div>
+                    <div class="text-recall">Я в захваті!!!. Все дуже детально розказали, і навіть запросили провести експеримент. Приїду ще раз</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-reviews">
+                <form>
+                  <p>Відвідали лекцію? Залишіть відгук</p>
+                  <label class="input-wrapper">
+                    <input class="field-input" required type="text" name="name" data-required="" onblur="this.setAttribute('data-value', this.value);" data-value="">
+                    <span class="field-label">Ім’я</span>
+                  </label>
+                  <label class="input-wrapper">
+                    <input class="field-input" type="text" name="city" data-required="" onblur="this.setAttribute('data-value', this.value);" data-value="">
+                    <span class="field-label">Місто</span>
+                  </label>
+                  <label class="input-wrapper textarea-wrapper">
+                    <textarea class="field-input" required rows="4" name="recall" data-required="" onblur="this.setAttribute('data-value', this.value);" data-value=""></textarea>
+                    <span class="field-label">Відгук</span>
+                  </label>
+                  <input type="submit" value='Додати коментар' class="button button-black">
+                </form>
+              </div>
+            </div>
+            <div class="tabs-panel" id="panel3">
+              <div class="ticket-list">
+                <div class="tr">
+                  <div class="td">Діти до 6 років</div>
+                  <div class="td price">250 грн</div>
+                  <div class="td"><a href="#" class="button button-white">Квитки</a></div>
+                </div>
+                <div class="tr">
+                  <div class="td">Діти від 6 до 18 років</div>
+                  <div class="td price">350 грн</div>
+                  <div class="td"><a href="#" class="button button-white">Квитки</a></div>
+                </div>
+                <div class="tr">
+                  <div class="td">Дорослі</div>
+                  <div class="td price">400 грн</div>
+                  <div class="td"><a href="#" class="button button-white">Квитки</a></div>
+                </div>
+                <div class="tr">
+                  <div class="td">Студенти</div>
+                  <div class="td price">400 грн</div>
+                  <div class="td"><a href="#" class="button button-white">Квитки</a></div>
+                </div>
+                <div class="tr">
+                  <div class="td">Групи до 10 чоловік</div>
+                  <div class="td price">200 грн (з особи)</div>
+                  <div class="td"><a href="#" class="button button-white">Квитки</a></div>
+                </div>
+                <div class="tr">
+                  <div class="td">Групи від 11 чоловік</div>
+                  <div class="td price">150 грн (з особи)</div>
+                  <div class="td"><a href="#" class="button button-white">Квитки</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+//= include/_footer.html

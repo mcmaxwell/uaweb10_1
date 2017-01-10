@@ -1,0 +1,239 @@
+.content-page {
+  margin-bottom: 95px;
+}
+.about-event {
+  width: 100%;
+  box-shadow: 0 0 40px rgba(27, 27, 30, 0.3);
+  display: inline-block;
+  @include breakpoint(large) {
+    width: calc(100% - 600px);
+  }
+  @include breakpoint(xlarge) {
+    margin-left: 110px;
+    width: 516px;
+  }
+  .img-event {
+    height: 300px;
+    background-size: cover;
+    @include breakpoint(large) {
+      height: 564px;
+    }
+  }
+  .short-info {
+    background-color: #7b3fb3;
+    width: 100%;
+    color: white;
+    padding: 1px 25px;
+    box-sizing: border-box;
+    font-size: rem-calc(17);
+    display: block;
+    @include breakpoint(medium) {
+      display: flex;
+    }
+    .block-info {
+      @include breakpoint(medium) {
+        width: 116px;
+        margin-right: 70px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+  }
+  .specifically {
+    font-family: $secondary-font;
+    font-size: rem-calc(20);
+    font-weight: 700;
+  }
+}
+.action-block {
+  background: white;
+  padding: 20px;
+  @include breakpoint(medium) {
+    width: 550px;
+    float: right;
+  }
+  @include breakpoint(large) {
+    padding: 0;
+  }
+}
+.tabs {
+  margin: 0 0 30px;
+  .tabs-title {
+    display: inline-block;
+    margin-right: 55px;
+  }
+  .tabs-link {
+    color: #b2b2b2;
+    font-family: $secondary-font;
+    font-size: rem-calc(18);
+    text-transform: uppercase;
+    &.active,
+    &:hover {
+      color: $button-color;
+    }
+  }
+}
+.tabs-panel {
+  display: none;
+  &.active {
+    display: block;
+  }
+  .type-event {
+    color: black;
+    text-transform: uppercase;
+  }
+  .title {
+    margin: 13px 0 45px;
+    color: black;
+    font-size: rem-calc(20);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .text {
+    max-width: 425px;
+  }
+  .reviews-block {
+    height: 320px;
+    overflow: auto;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .list-reviews {
+    max-width: 450px;
+  }
+  .item-recall {
+    margin-bottom: 25px;
+  }
+  .head-recall {
+    margin-bottom: 20px;
+    color: black;
+  }
+  .author {
+    display: inline-block;
+  }
+  .rating {
+    float: right;
+    span {
+      vertical-align: middle;
+    }
+  }
+  .text-recall {
+    color: #8a8a8a;
+  }
+  .ps-container > .ps-scrollbar-y-rail {
+    background-color: #d8d8d8;
+    width: 8px;
+    border-radius: 4px;
+  }
+  .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    background-color: $button-color;
+    width: 8px;
+    right: 0;
+  }
+  .stars {
+    @include sprite($icon-stars);
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    .current {
+      @include sprite($icon-stars-a);
+      position: absolute;
+      width: 100%;
+    }
+  }
+  .input-wrapper {
+    margin: 0 10px 10px 0;
+  }
+  .field-input {
+    border: 1px solid #cfcfcf;
+  }
+  .field-label {
+    left: 10px;
+    font-style: italic;
+  }
+  .textarea-wrapper {
+    width: 100%;
+    .field-input {
+      width: 100%;
+    }
+  }
+  .form-reviews .button {
+    margin-top: 10px;
+    height: 40px;
+    padding: 5px 21px;
+  }
+  .ticket-list {
+    display: table;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    background-color: $button-color;
+    box-sizing: border-box;
+    @include breakpoint(medium) {
+      background-color: white;
+      padding: 0;
+      color: black;
+    }
+    .tr {
+      display: block;
+      cursor: pointer;
+      border-bottom: 3px solid white;
+      transition: all $default-time;
+      @include breakpoint(medium) {
+        display: table-row;
+        border: 0;
+      }
+      &:first-child {
+        @include breakpoint(medium) {
+          width: 215px;
+        }
+      }
+      &:hover {
+        background-color: $button-color;
+        .td {
+          height: 70px;
+          color: white;
+          position: relative;
+          &:first-child {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .td {
+      display: block;
+      height: 50px;
+      font-size: rem-calc(16);
+      @include breakpoint(medium) {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      &:first-child {
+        &::after {
+          content: "";
+          background-color: $button-color;
+          position: absolute;
+          height: 70px;
+          width: 100px;
+          left: -100px;
+          top: 0;
+          z-index: 1;
+          opacity: 0;
+          transition: all $default-time;
+          @include breakpoint(large) {
+            z-index: -1;
+          }
+        }
+      }
+    }
+    .price {
+      font-weight: 700;
+      font-size: rem-calc(20);
+    }
+  }
+}

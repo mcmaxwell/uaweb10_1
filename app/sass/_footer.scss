@@ -1,0 +1,253 @@
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    background-color: $button-color;
+    width: 50%;
+    height: 1200px;
+    position: absolute;
+    left: -20px;
+    top: 0%;
+    z-index: -1;
+  }
+}
+.icon-coffee-cup {
+  @include sprite($icon-coffee-cup);
+}
+.icon-retail-store {
+  @include sprite($icon-retail-store);
+}
+.icon-molecule {
+  @include sprite($icon-molecule);
+}
+.information-block {
+  overflow: hidden;
+  box-shadow: -8.2px 26.8px 49px rgba(27, 27, 30, 0.2);
+  @include breakpoint(large) {
+    display: flex;
+    height: 680px;
+  }
+}
+.footer-contact {
+  text-align: center;
+  color: white;
+  font-size: rem-calc(18);
+  background-color: #90c004;
+  padding: 30px 8px;
+  box-sizing: border-box;
+  @include breakpoint(medium) {
+    min-width: 520px;
+    padding: 30px 0;
+    font-size: rem-calc(20);
+  }
+  @include breakpoint(large) {
+    padding: 70px 0;
+  }
+  .address {
+    font-weight: 700;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      margin-bottom: 65px;
+    }
+  }
+  .time-work {
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      margin: 0 0 50px;
+    }
+  }
+  .phone,
+  .mail {
+    color: white;
+    display: block;
+    transition: all $default-time;
+    &:hover {
+      color: $button-color;
+    }
+  }
+  .mail {
+    margin-top: 33px;
+  }
+}
+.footer-action {
+  width: 100%;
+  .action-block {
+    float: left;
+    width: 100%;
+    height: 430px;
+    position: relative;
+    box-sizing: border-box;
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+    &:not(.maps)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: 100% 100%;
+      opacity: 0.34;
+      transition: all $default-time;
+    }
+    &:hover::after {
+      background-size: 109% 109%;
+    }
+  }
+  .cafe,
+  .shops {
+    height: 253px;
+  }
+  .cafe {
+    background-color: $button-color;
+  }
+  .shops {
+    background-color: #90c004;
+  }
+  .info-portal {
+    background-color: #db862e;
+  }
+  .cafe::after {
+    background-image: url("../img/cafe.jpg");
+  }
+  .shops::after {
+    background-image: url("../img/shops.jpg");
+  }
+  .info-portal::after {
+    background-image: url("../img/portal.jpg");
+  }
+  .action-link {
+    display: flex;
+    height: 100%;
+    color: white;
+    font-size: rem-calc(25);
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+  }
+  .maps {
+    background-image: url("../img/maps.jpg");
+    background-size: cover;
+  }
+}
+
+.footer-links {
+  background-color: $button-color;
+  position: relative;
+  padding: 75px 0;
+  &::before {
+    background-color: $button-color;
+    content: "";
+    position: absolute;
+    height: 190px;
+    width: 100%;
+    top: -190px;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.logo-footer {
+  color: white;
+  float: none;
+  display: block;
+  width: 100%;
+  clear: both;
+  min-width: 305px;
+  height: 83px;
+  margin-bottom: 60px;
+  .logo-title {
+    font-size: 17px;
+    margin-top: 15px;
+  }
+  .logo-disc {
+    font-size: 13px;
+  }
+}
+.footer-title {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.icon-send {
+  @include sprite($icon-send);
+}
+.icon-facebook {
+  @include sprite($icon-f);
+  margin-right: 30px;
+}
+.icon-twitter {
+  @include sprite($icon-tw);
+}
+.icon-twitter,
+.icon-facebook {
+  display: inline-block;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.subscription-form {
+  position: relative;
+  margin-bottom: 65px;
+  display: inline-block;
+  .field-input {
+    border-color: #b2b2b2;
+    padding-left: 20px;
+    width: 230px;
+    color: white;
+  }
+  .field-label {
+    color: #b2b2b2;
+    padding-left: 20px;
+  }
+  .field-input:focus,
+  .field-input:not([data-value=""]) {
+    border-color: white;
+    & + .field-label {
+      color: white;
+    }
+  }
+  .submit {
+    background-color: transparent;
+    border: 0;
+    text-indent: -999pc;
+    position: absolute;
+    right: 9px;
+    cursor: pointer;
+    bottom: 10px;
+  }
+}
+.footer-links-block {
+  float: left;
+  margin-bottom: 40px;
+}
+.footer-links-list {
+  min-width: 166px;
+  @include breakpoint(xlarge) {
+    min-width: 173px;
+  }
+  .footer-link {
+    color: white;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 300;
+    margin: 5px 0;
+    @include breakpoint(medium) {
+      font-size: 13px;
+      margin: 5px 0;
+    }
+    &:hover {
+      color: #db862e;
+    }
+  }
+}

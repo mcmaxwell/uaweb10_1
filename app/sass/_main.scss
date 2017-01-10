@@ -1,0 +1,667 @@
+
+body {
+  background: white;
+  line-height: 1.5;
+  font-size: $default-font-size;
+  color: $text-color;
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+*:focus {
+  outline: none;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.column,
+.columns {
+  box-sizing: border-box;
+}
+[class^="icon-"] {
+  display: block;
+}
+
+.button {
+  padding: 14px 24px;
+  min-width: 143px;
+  text-align: center;
+  border: 3px solid $button-color;
+  height: 52px;
+  color: $button-color;
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: all 0.1s;
+  display: inline-block;
+  &:hover {
+    background-color: $button-color;
+    color: white;
+  }
+  &:active {
+    background-color: $button-color;
+    color: white;
+    border-color: white;
+  }
+  &.dark-text {
+    color: black;
+    &:hover {
+      background-color: $button-color;
+      border-color: black;
+    }
+    &:active {
+      background-color: $button-color;
+      color: white;
+    }
+  }
+}
+
+.button-black {
+  border-color: #1b1b1e;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-width: 1px;
+  &:hover {
+    background-color: $button-color;
+    border-color: black;
+  }
+  &:active {
+    background-color: $button-color;
+    color: white;
+  }
+}
+
+.button-white {
+  border-color: white;
+  color: white;
+  &:hover {
+    background-color: white;
+    border-color: $button-color;
+    color: $button-color;
+  }
+  &:active {
+    border-color: white;
+  }
+}
+
+.buy-ticket {
+  background-color: white;
+  color: $button-color;
+  border-color: white;
+  @include breakpoint(medium) {
+    margin-left: 34px;
+  }
+  &:hover {
+    background-color: $button-color;
+    color: white;
+  }
+  &:active {
+    background-color: transparent;
+    color: white;
+  }
+  &.purple {
+    background-color: $button-color;
+    border-color: $button-color;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: $button-color;
+    }
+    &:active {
+      background-color: transparent;
+      color: $button-color;
+    }
+  }
+}
+
+.slick-track {
+  cursor: -webkit-grab;
+}
+
+.slick-next,
+.slick-next:hover {
+  @include sprite($icon-arrow-r);
+  right: 77px;
+  &.slick-disabled {
+    @include sprite($icon-arrow-r-disable);
+  }
+}
+.slick-prev,
+.slick-prev:hover {
+  @include sprite($icon-arrow-l);
+  left: 77px;
+  &.slick-disabled {
+    @include sprite($icon-arrow-l-disable);
+  }
+}
+.slick-prev,
+.slick-next {
+  top: 36%;
+  z-index: 100;
+  display: none !important;
+  @include breakpoint(medium) {
+    display: block !important;
+  }
+  &::before {
+    display: none;
+  }
+}
+
+.slick-dots {
+  bottom: 19px;
+  li {
+    margin: 0 2px;
+    button::before {
+      width: 14px;
+      height: 14px;
+      font-size: 16px;
+      line-height: 14px;
+      color: white;
+      opacity: 1;
+    }
+    &.slick-active button::before {
+      color: #46196f;
+      opacity: 0.75;
+    }
+  }
+}
+
+.main {
+  overflow: hidden;
+  &.home {
+    margin-top: 25px;
+    @include breakpoint(xlarge) {
+      margin-top: 377px;
+    }
+  }
+}
+
+.main-slider {
+  overflow: hidden;
+  @include breakpoint(large) {
+    height: 700px;
+  }
+  @include breakpoint(xlarge) {
+    height: 976px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .item-main-slider {
+    overflow: hidden;
+  }
+  .button {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .layer-bg {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+    background-size: 100%;
+    @include breakpoint(large) {
+      height: 700px;
+    }
+    @include breakpoint(xlarge) {
+      height: 976px;
+    }
+  }
+  .content-align {
+    position: relative;
+    .column {
+      position: relative;
+    }
+    &::after {
+      content: "";
+      background: url("../img/line.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 820px;
+      height: 827px;
+      position: absolute;
+      left: -124px;
+      bottom: -46px;
+      opacity: 0.8;
+      @include breakpoint(xlarge) {
+        width: 768px;
+        height: 860px;
+        left: -20px;
+        bottom: -20px;
+      }
+    }
+  }
+  .content {
+    z-index: 100;
+    position: absolute;
+    bottom: 40px;
+    @include breakpoint(xlarge) {
+      bottom: 214px;
+    }
+    .date {
+      color: white;
+      font-family: "Open Sans";
+      font-size: rem-calc(50);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      line-height: 1;
+      @include breakpoint(medium) {
+        font-size: rem-calc(70);
+      }
+    }
+    .small-date {
+      font-size: rem-calc(25);
+      display: inline-block;
+      vertical-align: top;
+      line-height: 1.4;
+    }
+    .sub-title {
+      text-shadow: 1px 1.7px 38px rgba(27, 27, 30, 0.75);
+      color: #3d176b;
+      font-size: rem-calc(20);
+      @include breakpoint(medium) {
+        font-size: rem-calc(25);
+      }
+    }
+    .title {
+      text-shadow: 1px 1.7px 46px rgba(27, 27, 30, 0.75);
+      color: white;
+      font-size: rem-calc(20);
+      font-weight: 700;
+      text-transform: uppercase;
+      max-width: 560px;
+      margin: 10px 0 36px;
+      @include breakpoint(medium) {
+        font-size: rem-calc(35);
+      }
+    }
+  }
+}
+
+.stock-slider.slick-dotted {
+  overflow: hidden;
+  float: right;
+  margin: 0 0 0 10px;
+  width: 100%;
+  position: relative;
+  @include breakpoint(xlarge) {
+    width: 610px;
+  }
+  &::after {
+    @include breakpoint(medium) {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      pointer-events: none;
+      z-index: 10;
+      background-image: linear-gradient(90deg, hsla(0, 0%, 96%, 0.8) 0, hsla(0, 0%, 96%, 0) 25%, hsla(0, 0%, 96%, 0) 75%, hsla(0, 0%, 96%, 0.8));
+    }
+    @include breakpoint(xlarge) {
+      display: none;
+    }
+  }
+  .inform-block {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    @include breakpoint(medium) {
+      width: 610px;
+      padding: 30px;
+    }
+  }
+}
+
+.inform-block {
+  width: 100%;
+  height: 348px;
+  background-color: $menu-color;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  color: white;
+  padding: 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: left;
+  position: relative;
+  @include breakpoint(medium) {
+    width: 50%;
+  }
+  @include breakpoint(xlarge) {
+    padding: 0 90px;
+  }
+  &.green-block {
+    background-color: #90c004;
+    box-shadow: 0 2px 49px rgba(27, 27, 30, 0.2);
+  }
+  .description-block {
+    font-size: rem-calc(18);
+  }
+}
+
+.icon-horn {
+  @include sprite($icon-horn);
+}
+.icon-tour {
+  @include sprite($icon-tour);
+}
+.icon-ticket {
+  @include sprite($icon-ticket);
+}
+
+.title-block {
+  font-size: rem-calc(22);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 10px 0;
+  max-width: 275px;
+  font-family: "Open Sans";
+  line-height: 1.7;
+  position: relative;
+  @include breakpoint(large) {
+    margin: 25px 0 33px;
+  }
+  p {
+    margin: 0;
+  }
+  &.dark {
+    color: $text-color;
+    max-width: none;
+  }
+}
+
+.subtitle-block {
+  font-size: rem-calc(22);
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+
+.description-block {
+  font-size: rem-calc(17);
+  margin-bottom: 29px;
+}
+
+.link-to-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  text-indent: -999pc;
+  transition: all $default-time ease;
+  &:hover {
+    box-shadow: inset 0 0 35px 10px rgba(255, 255, 255, 0.5);
+  }
+}
+.news-slider-list,
+.page-slider {
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 90%;
+  }
+}
+.item-news-slider {
+  width: 378px;
+  height: 357px;
+  overflow: hidden;
+  transition: all $default-time ease;
+  position: relative;
+  text-align: center;
+  @include breakpoint(large) {
+    height: 422px;
+  }
+  .content-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 64%;
+    @include breakpoint(large) {
+      height: 100%;
+    }
+  }
+  .bg-action-block {
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    transition: all $default-time ease;
+    @include breakpoint(large) {
+      position: absolute;
+      top: 100%;
+    }
+    .button {
+      position: absolute;
+      z-index: 300;
+      bottom: 24px;
+      @include breakpoint(large) {
+        top: 46%;
+      }
+    }
+    &::after {
+      background-color: rgba(222,121,13,.65);
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100px;
+      @include breakpoint(large) {
+        top: 0;
+        z-index: 200;
+        height: auto;
+      }
+    }
+  }
+  &:hover .bg-action-block {
+    top: 0;
+  }
+  .date-news {
+    color: #7b4aa5;
+    font-size: rem-calc(18);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 37px;
+  }
+  .title-news {
+    color: $text-color;
+    font-size: rem-calc(16);
+    font-style: italic;
+    line-height: 25px;
+  }
+}
+
+.icon-cake {
+  @include sprite($icon-cake);
+}
+.icon-science {
+  @include sprite($icon-science);
+}
+.interesting-event {
+  position: relative;
+  z-index: 100;
+}
+.event-block {
+  box-shadow: -1.1px -31px 49px rgba(27, 27, 30, 0.2), -8.2px 26.8px 49px rgba(27, 27, 30, 0.2);
+  @include breakpoint(medium) {
+    display: flex;
+  }
+}
+.event-img,
+.event-info {
+  width: 100%;
+  height: 346px;
+  display: flex;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center center;
+  background-size: cover;
+  transition: all $default-time ease;
+  @include breakpoint(medium) {
+    height: 335px;
+    width: 50%;
+  }
+  @include breakpoint(large) {
+    height: 435px;
+    background-size: 100% 100%;
+  }
+}
+.event-img:hover {
+  background-size: 109% 109%;
+}
+.event-info {
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  @include breakpoint(large) {
+    padding: 0 90px;
+  }
+}
+.green-bg {
+  background-color: #90c004;
+}
+.orange-bg {
+  background-color: #f68a1d;
+}
+
+.page-slider {
+  position: relative;
+  &::before {
+    content: "";
+    background: url("../img/line.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 1000px;
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    opacity: 0.9;
+    z-index: -1;
+    @include breakpoint(large) {
+      bottom: 44%;
+    }
+  }
+  &::after {
+    content: "";
+    background-color: #9153cc;
+    width: 50%;
+    height: 1300px;
+    position: absolute;
+    left: -20px;
+    top: -200px;
+    z-index: -1;
+  }
+}
+.content-slide {
+  display: flex;
+  overflow: hidden;
+  @include breakpoint(xlarge) {
+    height: 678px;
+  }
+  .bg-page,
+  .desc-page {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+  }
+  .bg-page {
+    background-color: #9153cc;
+    display: none;
+    @include breakpoint(medium) {
+      display: block;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      box-shadow: inset 0 -30px 106px 110px #9153cc;
+      top: -77px;
+      height: 615px;
+      z-index: 1;
+      width: 100%;
+      @include breakpoint(xlarge) {
+        box-shadow: inset 24px -30px 103px 88px #9153cc;
+        width: 89%;
+        left: -85px;
+      }
+    }
+  }
+  .bg-page-img {
+    opacity: 0.1;
+    margin: auto;
+    @include breakpoint(xlarge) {
+      margin-left: -24px;
+    }
+  }
+  .desc-page {
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    @include breakpoint(xlarge) {
+      padding: 153px 0 0 210px;
+    }
+    .text {
+      margin-bottom: 60px;
+    }
+    .button {
+      font-family: $secondary-font;
+    }
+    .buy-ticket {
+      margin: 10px 0;
+      @include breakpoint(xlarge) {
+        margin: 0 0 0 26px;
+      }
+    }
+  }
+  .attach-img {
+    @include breakpoint(xlarge) {
+      position: absolute;
+      left: -255px;
+      top: 108px;
+    }
+    img {
+      margin: auto;
+    }
+  }
+  .content-page-slide {
+    margin-bottom: 30px;
+  }
+}
